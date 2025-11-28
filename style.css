@@ -1,0 +1,307 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #000;
+  background: white;
+}
+
+/* Page 1 - Cover */
+.page {
+  width: 100%;
+  min-height: 100vh;
+  page-break-after: always;
+  position: relative;
+}
+
+.cover-page {
+  background: linear-gradient(135deg, #2b4970 0%, #1e3a5f 100%);
+  background-image: url("BOOK MAX MEIO AMARGO A13425 PED 008.CDS.25_page-0001.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 60px;
+}
+
+.cover-header {
+  color: white;
+}
+
+.cover-logo {
+  font-size: 48px;
+  font-weight: bold;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.cover-tagline {
+  font-size: 16px;
+  margin-bottom: 40px;
+}
+
+.cover-purpose {
+  font-size: 18px;
+  margin-bottom: 80px;
+}
+
+.cover-title-box {
+  background: rgba(30, 58, 95, 0.95);
+  padding: 30px;
+  text-align: center;
+}
+
+.cover-title {
+  color: white;
+  font-size: 36px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+/* Page 2 - Informações do Pedido */
+.info-page {
+  padding: 60px;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.photo-page.side-by-side > .page-header {
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.page-title {
+  font-size: 32px;
+  font-weight: bold;
+  color: #000;
+}
+
+.header-logo {
+  text-align: right;
+}
+
+.photo-page.side-by-side > .page-header > .header-logo {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.header-logo-img {
+  height: 240px;
+  width: auto;
+  object-fit: contain;
+}
+
+.header-logo-text {
+  font-size: 36px;
+  font-weight: bold;
+  font-style: italic;
+  color: #2b4970;
+}
+
+.header-logo-tagline {
+  font-size: 12px;
+  color: #666;
+}
+
+.info-box {
+  background: #e8edf4;
+  padding: 40px;
+  margin-top: 30px;
+}
+
+.info-table {
+  width: 100%;
+  background: white;
+}
+
+.info-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: #ddd;
+  margin-bottom: 1px;
+}
+
+.info-cell {
+  background: white;
+  padding: 15px 20px;
+}
+
+.info-cell.full {
+  grid-column: 1 / -1;
+}
+
+.info-label {
+  font-weight: normal;
+  color: #000;
+  display: inline;
+}
+
+.info-value {
+  font-weight: bold;
+  color: #000;
+  display: inline;
+  margin-left: 5px;
+}
+
+/* Page 3 - Formulário PPRO */
+.formulario-page {
+  padding: 60px;
+  background: white;
+}
+
+.formulario-image {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.formulario-image img {
+  width: 100%;
+  height: auto;
+}
+
+/* Pages with photos */
+.photo-page {
+  padding: 60px;
+  background: white;
+}
+
+.photo-page.side-by-side {
+  display: flex;
+  flex-direction: column;
+}
+
+.photo-page.side-by-side > .photo-section-wrapper {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 40px;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.photo-page.side-by-side > .photo-section-wrapper > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 500px;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  margin: 40px 0;
+  color: #000;
+}
+
+.photos-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+  margin-top: 40px;
+}
+
+.photo-box {
+  text-align: center;
+}
+
+.photo-box.full {
+  grid-column: 1 / -1;
+}
+
+.photo-box img {
+  width: 100%;
+  height: auto;
+}
+
+/* Footer wave */
+.wave-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  background: linear-gradient(135deg, #2b4970 0%, #1e3a5f 100%);
+  clip-path: polygon(0 50%, 100% 0, 100% 100%, 0 100%);
+}
+
+/* Last page - Contact */
+.contact-page {
+  padding: 60px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.contact-info {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.contact-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.contact-email {
+  font-size: 20px;
+  color: #2b4970;
+  margin: 10px 0;
+  text-decoration: underline;
+}
+
+.contact-phone {
+  font-size: 20px;
+  color: #000;
+  margin: 10px 0;
+}
+
+.contact-footer {
+  position: absolute;
+  bottom: 60px;
+  text-align: center;
+}
+
+.contact-logo {
+  font-size: 48px;
+  font-weight: bold;
+  font-style: italic;
+  color: #2b4970;
+  margin-bottom: 10px;
+}
+
+.contact-logo-img {
+  height: 100px;
+  width: auto;
+  object-fit: contain;
+}
+
+.contact-tagline {
+  font-size: 14px;
+  color: #666;
+}
+
+@media print {
+  .page {
+    page-break-after: always;
+  }
+}
