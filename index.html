@@ -84,9 +84,10 @@
     }
 
     .photo-page.side-by-side > .page-header {
-      justify-content: center;
-      flex-direction: column;
-      text-align: center;
+      justify-content: space-between;
+      flex-direction: row;
+      text-align: left;
+      align-items: flex-start;
     }
 
     .page-title {
@@ -100,8 +101,11 @@
     }
 
     .photo-page.side-by-side > .page-header > .header-logo {
-      text-align: center;
-      margin-top: 20px;
+      text-align: right;
+      margin-top: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     .header-logo-img {
@@ -172,10 +176,13 @@
     .formulario-image {
       width: 100%;
       margin-top: 30px;
+      display: flex;
+      justify-content: center;
     }
 
     .formulario-image img {
       width: 100%;
+      max-width: 900px;
       height: auto;
     }
 
@@ -192,28 +199,41 @@
 
     .photo-page.side-by-side > .photo-section-wrapper {
       display: flex;
-      gap: 40px;
+      gap: 150px;
       margin-bottom: 40px;
-      align-items: flex-start;
+      align-items: center;
       justify-content: center;
-      max-width: 1200px;
-      margin-left: auto;
-      margin-right: auto;
+      margin-top: 60px;
     }
 
     .photo-page.side-by-side > .photo-section-wrapper > div {
-      flex: 1;
+      flex: 0 0 auto;
       display: flex;
       flex-direction: column;
       align-items: center;
-      max-width: 500px;
+      width: 300px;
+    }
+
+    .photo-page.side-by-side
+      > .photo-section-wrapper
+      > div
+      > .section-subtitle {
+      width: 100%;
+      margin: 0 0 20px 0;
+    }
+
+    .photo-page.side-by-side
+      > .photo-section-wrapper
+      > div
+      > .photos-container {
+      width: 100%;
     }
 
     .section-subtitle {
       text-align: center;
       font-size: 28px;
       font-weight: bold;
-      margin: 40px 0;
+      margin: 40px 0 20px 0;
       color: #000;
     }
 
@@ -221,7 +241,11 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 5px;
-      margin-top: 40px;
+      margin-top: 0;
+    }
+
+    .photo-page:not(.side-by-side) .photos-container {
+      gap: 20px;
     }
 
     .photo-box {
@@ -235,6 +259,17 @@
     .photo-box img {
       width: 100%;
       height: auto;
+    }
+
+    .photo-page.side-by-side .photo-box img {
+      width: fit-content;
+      height: 400px;
+      object-fit: contain;
+    }
+
+    /* Páginas 4 e 7 - imagens com tamanho controlado */
+    .photo-page:not(.side-by-side) .photo-box img {
+      max-width: 500px;
     }
 
     /* Footer wave */
@@ -316,9 +351,7 @@
   </style>
   <body>
     <!-- Page 1: Cover -->
-    <div class="page cover-page">
-    
-    </div>
+    <div class="page cover-page"></div>
 
     <!-- Page 2: Informações do Pedido -->
     <div class="page info-page">
@@ -502,7 +535,7 @@
       </div>
 
       <div class="photo-section-wrapper">
-        <div>
+        <div class="sid-by-side">
           <div class="section-subtitle">Selagem Longitudinal</div>
           <div class="photos-container">
             <div class="photo-box">
@@ -511,7 +544,7 @@
           </div>
         </div>
 
-        <div>
+        <div class="sid-by-side">
           <div class="section-subtitle">Codificação/Datação</div>
           <div class="photos-container">
             <div class="photo-box">
@@ -538,7 +571,7 @@
       </div>
 
       <div class="photo-section-wrapper">
-        <div>
+        <div class="sid-by-side">
           <div class="section-subtitle">Selagem</div>
           <div class="photos-container">
             <div class="photo-box">
@@ -547,7 +580,7 @@
           </div>
         </div>
 
-        <div>
+        <div class="sid-by-side">
           <div class="section-subtitle">Codificação/Datação</div>
           <div class="photos-container">
             <div class="photo-box">
